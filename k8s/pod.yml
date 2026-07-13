@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: frontend-task-pod
+  namespace: task
+
+spec:
+  containers:
+  - name: frontend-task
+    image: task-manager-frontend:latest
+    imagePullPolicy: Never
+    ports:
+    - containerPort: 80
+
